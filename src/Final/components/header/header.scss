@@ -12,12 +12,14 @@
 
 }
 .store-header {
+  width: 100%;
   height: 768px;
   background-color: #f9fbff;
   display: flex;
 }
 
-.header__content {
+.header-content {
+  width: 100%;
   height: 768px;
   background-color: #f9fbff;
   display: flex;
@@ -77,13 +79,8 @@
     background-color: #ffffff;
     box-shadow: 0 4px 24px 0 rgba(74, 74, 74, 0.5);
     border-radius: 50%;
-    cursor: pointer;;
-    &__btn {
-      width: 13.5px;
-      height: 10.8px;
-      transform: rotate(90deg);
-      background-color: #c7a17a;
-    }
+    cursor: pointer;
+    border: none;
   }
 }
 
@@ -95,15 +92,22 @@
 .menu {
   display: flex;
   flex-direction: column;
-  width: 274px;
+  width: 100%;
   height: 768px;
   background-color: #415167;
   align-items: center;
-
 }
 
-.menu__components {
+.menu-components {
   padding-top: 84px;
+  &__basket {
+    height: 118px;
+  }
+  &__basket-cart {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
 }
 
 .basket {
@@ -116,36 +120,47 @@
 }
 
 .list-menu {
-  &__title {
-    height: 60px;
-    a {
-      font-family: Nunito;
-      font-size: 16px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #edf0f5;
-    }
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-page {
+  &__component {
   }
-  &__content {
+  &__link {
+    width: 108px;
+    height: 22px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #edf0f5;
+  }
+}
+
+.coffee-list {
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__component {
+
+  }
+  &__link {
+    width: 140px;
     height: 225px;
-    display: flex;
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    a {
-      font-family: Nunito;
-      font-size: 16px;
-      font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.5;
-      letter-spacing: normal;
-      color: #edf0f5;
-    }
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #edf0f5;
   }
 }

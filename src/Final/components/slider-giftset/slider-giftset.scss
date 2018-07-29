@@ -1,0 +1,218 @@
+.slider-giftset {
+  width: 1074px;
+  height: 802px;
+  background-color: #edf0f5;
+  position: relative;
+}
+
+.second-slider-title {
+  position: absolute;
+  top: 13%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  &__top {
+    width: 224px;
+    height: 24px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #415167;
+  }
+  &__bot {
+    height: 32px;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: #415167;
+    text-align: center;
+  }
+}
+
+.second-slideshow {
+
+  &__slides {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    width: 1138px;
+    height: 460px;
+  }
+  &__icon {
+    width: 463px;
+    height: 409px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150.5%, -43.5%);
+  }
+  &__components {
+    display: flex;
+    justify-content: flex-end;
+    width: 882px;
+    height: 460px;
+    background-color: #ffffff;
+    box-shadow: 1px 0 10px 0 rgba(205, 205, 205, 0.5);
+  }
+  &__descriptions {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+  &__price {
+    width: 430px;
+    height: 20px;
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #c7a17a;
+  }
+  &__name {
+    width: 430px;
+    height: 30px;
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: #232c38;
+  }
+  &__info {
+    width: 430px;
+    height: 110px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #151d28;
+  }
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    width: 430px;
+
+  }
+  &__taste {
+
+  }
+  &__taste-icon {
+
+  }
+  &__text {
+    height: 40px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #415167;
+  }
+  &__size {
+
+  }
+  &__size-icon {
+
+  }
+  &__actions {
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__byu {
+    width: 166px;
+    height: 37.8px;
+    border-radius: 19px;
+    background-color: #c7a17a;
+    border: none;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f9fbff;
+    cursor: pointer;
+  }
+  &__detail {
+    width: 80px;
+    height: 22px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #415167;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+  }
+  &__line {
+    width: 3px;
+    height: 100%;
+    border: solid 1px #edf0f5;
+  }
+  &__controles {
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__Rectangle {
+    width: 88px;
+    height: 154px;
+    background-color: #ffffff;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: #415167;
+    border: none;
+    cursor: pointer;
+    p {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:nth-child(2) {
+      opacity: 0.5;
+      background-color: #edf0f5;
+    }
+    &:nth-child(3) {
+      opacity: 0.5;
+      background-color: #edf0f5;
+    }
+  }
+}
