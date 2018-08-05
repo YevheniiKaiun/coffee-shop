@@ -1,8 +1,15 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
 .slider-giftset {
   width: 1074px;
   height: 802px;
   background-color: #edf0f5;
   position: relative;
+  @include mobile {
+    width: 100%;
+    height: 400px;
+  }
 }
 
 .second-slider-title {
@@ -10,6 +17,11 @@
   top: 13%;
   left: 63%;
   transform: translate(-50%, -50%);
+  @include mobile {
+    width: 100%;
+    top: 12%;
+    left: 50%;
+  }
   &__top {
     width: 224px;
     height: 24px;
@@ -21,6 +33,11 @@
     line-height: normal;
     letter-spacing: normal;
     color: #415167;
+    @include mobile {
+      width: 100%;
+      text-align: center;
+
+    }
   }
   &__bot {
     height: 32px;
@@ -33,11 +50,17 @@
     letter-spacing: normal;
     color: #415167;
     text-align: center;
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }
 
 .second-slideshow {
-
+  @include mobile {
+    width: 100%;
+    height: 300px;
+  }
   &__slides {
     display: flex;
     justify-content: center;
@@ -47,15 +70,30 @@
     transform: translate(-25%, -50%);
     width: 1138px;
     height: 460px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+    }
   }
   &__icon {
-    width: 463px;
+    display: none;
+    width: 598px;
     height: 409px;
     z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-150.5%, -43.5%);
+    transform: translate(-123.5%, -83.5%);
+    @include mobile {
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  img {
+    width: 100%;
   }
   &__components {
     display: flex;
@@ -64,6 +102,9 @@
     height: 460px;
     background-color: #ffffff;
     box-shadow: 1px 0 10px 0 rgba(205, 205, 205, 0.5);
+    @include mobile {
+      display: none;
+    }
   }
   &__descriptions {
     width: 580px;
@@ -184,12 +225,22 @@
   &__controles {
     display: flex;
     flex-direction: column;
+    width: 88px;
 
   }
-  &__Rectangle {
+  &__item {
     width: 88px;
     height: 154px;
-    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.5;
+    background-color: #edf0f5;
+  }
+  &__item-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Montserrat;
     font-size: 30px;
     font-weight: 900;
@@ -198,21 +249,71 @@
     line-height: 1.13;
     letter-spacing: normal;
     color: #415167;
-    border: none;
-    cursor: pointer;
-    p {
-      height: 100%;
+    height: 100%;
+  }
+  &__prev {
+    display: none;
+    @include mobile {
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &:nth-child(2) {
-      opacity: 0.5;
-      background-color: #edf0f5;
-    }
-    &:nth-child(3) {
-      opacity: 0.5;
-      background-color: #edf0f5;
+      border-radius: 50%;
+      border: none;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      background: rgba(0,0,0,0.5);
     }
   }
+  &__next {
+    display: none;
+    @include mobile {
+      display: flex;
+      border-radius: 50%;
+      border: none;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      position: absolute;
+      background: rgba(0,0,0,0.5);
+    }
+  }
+
 }
+
+.second-slideshow__icon.active {
+  display: block;
+}
+
+.second-slideshow__item.active {
+  background-color: #ffffff;
+}
+
+#slide-2 {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-128.5%, -95.5%);
+  @include mobile {
+    width: 100%;
+    transform: translate(-48%, -50%);
+  }
+}
+
+#slide-3 {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-128.5%, -95.5%);
+  @include mobile {
+    width: 100%;
+    transform: translate(-48%, -50%);
+  }
+}
+
+.fas {
+  width: 100%;
+  //color: #ffffff;
+}
+

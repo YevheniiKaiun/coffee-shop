@@ -3,12 +3,23 @@
 @import "../styles/variables";
 @import "../styles/grid";
 
-
+$menu-width: 40%;
+$account-panel-width: 40%;
+$account-panel-width-mobile: 100%;
+$account-panel-avatar-size: 50px;
+$account-panel-items-margin: 15px;
+$toggle-size: 25px;
+$padding-horizontal: 15px;
+$expand-font-color: #FFF;
 
 .cofee-store {
   width: 1400px;
   height: 4028px;
   background-color: #f9fbff;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+  }
 
 }
 .store-header {
@@ -16,6 +27,12 @@
   height: 768px;
   background-color: #f9fbff;
   display: flex;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header-content {
@@ -25,6 +42,12 @@
   display: flex;
   position: relative;
   margin-left: 50px;
+  @include mobile {
+    margin: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #d8d8d8;
+  }
 
 }
 
@@ -33,6 +56,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+
+  }
+  &__img {
+    max-width: 124px;
+  }
   &__logo {
     width: 109.4px;
     height: 36.4px;
@@ -40,6 +71,11 @@
     top: 13%;
     left: 43%;
     transform: translate(-50%, -50%);
+    @include mobile {
+      position: absolute;
+      top: 26px;
+      left: 71px;
+    }
   }
   &__title {
     width: 470px;
@@ -57,6 +93,9 @@
     left: 89%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    @include mobile {
+      display: none;
+    }
     .text-style-1 {
       color: #415167;
     }
@@ -64,6 +103,10 @@
       width: 512px;
       height: 70px;
       background-color: #c7a17a;
+      @include mobile {
+        width: 100%;
+        height: 25px;
+      }
     }
   }
 }
@@ -82,6 +125,9 @@
     cursor: pointer;
     border: none;
   }
+  @include mobile {
+    display: none;
+  }
 }
 
 .fa-play {
@@ -96,22 +142,38 @@
   height: 768px;
   background-color: #415167;
   align-items: center;
+  @include mobile {
+    background-color: #f9fbff;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .menu-components {
   padding-top: 84px;
-  &__basket {
-    height: 118px;
+  background-color: #415167;
+  @include mobile {
+    @include hidden;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 5px;
   }
-  &__basket-cart {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
+  &_expand {
+    @include visible;
+    background-color: #d8d8d8;
+    height: 300px;
   }
 }
 
 .basket {
   height: 118px;
+  @include mobile {
+    display: none;
+  }
   &__cart {
     width: 38px;
     height: 38px;
@@ -124,9 +186,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mobile {
+    width: 140px;
+  }
 }
 
 .home-page {
+  @include mobile {
+    height: 50px;
+  }
   &__component {
   }
   &__link {
@@ -140,6 +208,9 @@
     line-height: normal;
     letter-spacing: normal;
     color: #edf0f5;
+    @include mobile {
+      color: black;
+    }
   }
 }
 
@@ -148,7 +219,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  &__component {
+  @include mobile {
+    width: 140px;
+    height: 300px;
+  }
+  &__component:hover {
 
   }
   &__link {
@@ -162,5 +237,31 @@
     line-height: 1.5;
     letter-spacing: normal;
     color: #edf0f5;
+    @include mobile {
+      color: black;
+    }
+  }
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: $toggle-size;
+  height: $toggle-size;
+  padding: 0;
+  background: none;
+  border: none;
+  @include hidden;
+  @include mobile {
+    @include visible;
+    position: absolute;
+    top: 2%;
+    left: 88%;
+  }
+  &__bar {
+    width: $toggle-size;
+    height: 1px;
+    background-color: $header-link-color;
   }
 }
